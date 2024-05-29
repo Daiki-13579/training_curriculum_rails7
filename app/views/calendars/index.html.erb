@@ -8,12 +8,11 @@
   <% end %>
 </div>
 
-<div>
   <div class='calendar'>
     <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
-          <%= day[:month] %>/<%= day[:date] %>
+          <% day[:month] %>/<% day[:date] %>
         </div>
         <ul class='content'>
           <% if day[:plans].any? %>
@@ -24,5 +23,3 @@
         </ul>
       </div>
     <% end %>
-  </div>
-</div>
